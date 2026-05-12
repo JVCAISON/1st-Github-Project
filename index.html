@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Films Everyone Should See</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cinzel:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="ambient ambient-1"></div>
+    <div class="ambient ambient-2"></div>
+
+    <header class="hero">
+      <div class="brand-row">
+        <span class="brand-mark">FS</span>
+        <div>
+          <p class="eyebrow">Curated Watchlist</p>
+          <h1>Films Everyone Should See</h1>
+        </div>
+      </div>
+      <p class="subtitle">A sharp, browsable collection of essential films across eras, genres, and moods.</p>
+      <div class="hero-stats">
+        <div>
+          <strong id="filmCount">0</strong>
+          <span>Films</span>
+        </div>
+        <div>
+          <strong>8</strong>
+          <span>Genres</span>
+        </div>
+        <div>
+          <strong>1</strong>
+          <span>Click to explore</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="layout">
+      <section class="controls card" aria-label="Film filters">
+        <div class="search-wrap">
+          <label for="searchInput">Search films</label>
+          <input id="searchInput" type="text" placeholder="Try Casablanca or thriller" autocomplete="off">
+        </div>
+        <button id="randomButton" class="btn btn-primary" type="button">Surprise Me</button>
+        <button id="clearButton" class="btn btn-outline" type="button">Reset</button>
+
+        <div class="filter-row">
+          <label for="genreFilter">Genre</label>
+          <select id="genreFilter">
+            <option value="all">All Genres</option>
+          </select>
+        </div>
+
+        <div class="list-controls">
+          <button id="prevButton" class="btn btn-outline" type="button">Previous</button>
+          <span id="pageLabel">Showing 1 - 6</span>
+          <button id="nextButton" class="btn btn-outline" type="button">Next</button>
+        </div>
+      </section>
+
+      <section class="content-grid">
+        <article class="list card">
+          <div class="section-head">
+            <h2>Must-See Films</h2>
+            <p id="resultsLabel">Loading catalog...</p>
+          </div>
+          <div id="filmList" class="film-list" aria-live="polite"></div>
+        </article>
+
+        <article class="detail card" id="filmDetail" aria-live="polite">
+          <p class="hint">Select a film to see why it belongs on the list.</p>
+        </article>
+      </section>
+    </main>
+
+    <script src="Script.js"></script>
+  </body>
+</html>
